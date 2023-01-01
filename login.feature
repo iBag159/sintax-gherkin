@@ -1,3 +1,5 @@
+@MVP @Web @Android @iOS
+
 Feature: Login
   As a customer,
   I want to login with email and password,
@@ -6,6 +8,7 @@ Feature: Login
   Background: Start point
     Given I am at the Login page
 
+  @BigScreen
   Scenario: Logging in with valid credentials
     #Given I am at the Login page
     When I fill the account email textbox with value "admin@admin.com"
@@ -33,4 +36,4 @@ Feature: Login
   Examples:
   | email             | password  |
   | admin@admin.com   | 1234      |
-  | user@admin.com    | 5432      |
+  | user@admin.com    | 1234      |
