@@ -5,6 +5,8 @@ Feature: Login
   I want to login with email and password,
   So that I can use the app
 
+  Rule: An adult is 18 or older
+
   Background: Start point
     Given I am at the Login page
 
@@ -17,6 +19,11 @@ Feature: Login
     Then I should be at the home page
     And title of home page is "Global Position"
     But login button is not present
+      """
+      Name: Gaby Alvarez
+      Amount: 10000
+      Loans: 1000
+      """
 
   Scenario: Logging in with invalid credentials
     #Given I am at the Login page
