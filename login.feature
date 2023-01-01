@@ -3,8 +3,11 @@ Feature: Login
   I want to login with email and password,
   So that I can use the app
 
-  Scenario: Logging in with valid credentials
+  Background: Start point
     Given I am at the Login page
+
+  Scenario: Logging in with valid credentials
+    #Given I am at the Login page
     When I fill the account email textbox with value "admin@admin.com"
     And I fill the password textbox with value "1234"
     And I click the login button
@@ -13,7 +16,7 @@ Feature: Login
     But login button is not present
 
   Scenario: Logging in with invalid credentials
-    Given I am at the Login page
+    #Given I am at the Login page
     When I fill the account email textbox with value "adminNovalid@admin.com"
     And I fill the password textbox with value "novalid"
     And I click the login button
